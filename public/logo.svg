@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Pablo Manchon</title>
+  <rect x="1" y="1" width="62" height="62" rx="14" fill="#10100f" stroke="#34342f" stroke-width="2"/>
+  <text x="27" y="39" fill="#f5f3ea" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" letter-spacing="-1.8" text-anchor="middle">PM</text>
+  <circle cx="52.5" cy="37" r="2.8" fill="#b8ff22"/>
+</svg>

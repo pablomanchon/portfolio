@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.edge-print-profile/
+.edge-profile-*/
+cv/*.updated.pdf
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db

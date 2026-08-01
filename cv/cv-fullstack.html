@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pablo Manchon Richardi | CV Full Stack</title>
+    <meta name="theme-color" content="#c84b31" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+    <style>
+      :root {
+        --bg: #f4efe7;
+        --paper: #fffdf9;
+        --ink: #1d2433;
+        --muted: #5f6b7b;
+        --line: #d8d0c4;
+        --accent: #0f766e;
+        --accent-soft: #dff3ef;
+        --chip: #eef3f8;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(135deg, #efe7db 0%, #f7f3ec 52%, #e8f4f1 100%);
+        color: var(--ink);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        padding: 14mm 14mm 12mm;
+        background: var(--paper);
+      }
+
+      .top {
+        display: grid;
+        grid-template-columns: 1.8fr 1fr;
+        gap: 16px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .name {
+        margin: 0 0 6px;
+        font-size: 28px;
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+      }
+
+      .role {
+        margin: 0 0 12px;
+        color: var(--accent);
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+
+      .summary {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .contact {
+        display: grid;
+        gap: 6px;
+        align-content: start;
+        padding: 12px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: linear-gradient(180deg, #fff 0%, #f7faf8 100%);
+      }
+
+      .contact strong {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--muted);
+      }
+
+      .contact a,
+      .contact span {
+        font-size: 13px;
+        line-height: 1.4;
+        word-break: break-word;
+      }
+
+      .section {
+        margin-top: 14px;
+      }
+
+      .section-title {
+        margin: 0 0 8px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--muted);
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .chip {
+        padding: 6px 9px;
+        border-radius: 999px;
+        background: var(--chip);
+        font-size: 11px;
+        font-weight: 600;
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .card {
+        padding: 12px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: #fff;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .card h3 {
+        margin: 0 0 5px;
+        font-size: 15px;
+      }
+
+      .meta {
+        margin: 0 0 6px;
+        color: var(--accent);
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .card p {
+        margin: 0 0 6px;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.45;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      li {
+        margin-bottom: 5px;
+        color: var(--ink);
+        font-size: 12px;
+        line-height: 1.35;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .page {
+          margin: 0;
+          box-shadow: none;
+        }
+
+        .section,
+        .two-col,
+        .card,
+        .footer-note {
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="top">
+        <section>
+          <h1 class="name">Pablo Manchon Richardi</h1>
+          <p class="role">Desarrollador Full Stack</p>
+          <p class="summary">
+            Desarrollador Full Stack con experiencia creando productos y sistemas para
+            necesidades de negocio. Construyo interfaces, logica de
+            administracion, flujos con datos y soluciones publicadas en
+            produccion. Busco una oportunidad para aportar en un equipo como
+            desarrollador Full Stack para web, Android o desktop.
+          </p>
+        </section>
+
+        <aside class="contact">
+          <strong>Contacto</strong>
+          <span>Argentina</span>
+          <a href="mailto:pablomanchon97@gmail.com">pablomanchon97@gmail.com</a>
+          <a href="https://github.com/pablomanchon">github.com/pablomanchon</a>
+          <a href="https://www.linkedin.com/in/pablo-manchon-richardi-471346252/">
+            linkedin.com/in/pablo-manchon-richardi-471346252
+          </a>
+          <a href="https://wa.me/5492616416111">WhatsApp: +54 9 261 641 6111</a>
+        </aside>
+      </header>
+
+      <section class="section">
+        <h2 class="section-title">Stack Tecnico</h2>
+        <div class="chips">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">React</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">Supabase</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Git</span>
+          <span class="chip">GitHub</span>
+          <span class="chip">SEO tecnico</span>
+          <span class="chip">Google Search</span>
+        </div>
+      </section>
+
+      <section class="section two-col">
+        <article class="card">
+          <h2 class="section-title">Fortalezas</h2>
+          <ul>
+            <li>Desarrollo de interfaces claras y responsivas para web, Android y desktop.</li>
+            <li>Implementacion de logica de negocio, paneles administrativos y roles.</li>
+            <li>Trabajo con bases de datos, flujos operativos y automatizaciones.</li>
+            <li>Capacidad para llevar proyectos desde idea hasta publicacion.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2 class="section-title">Perfil Laboral</h2>
+          <ul>
+            <li>Perfil orientado a posiciones Full Stack, Frontend o Backend.</li>
+            <li>Interes en sumarme a equipos de producto, software factory o desarrollo web.</li>
+            <li>Experiencia construyendo soluciones para turnos, logistica y gestion interna.</li>
+            <li>Disponible para trabajo remoto y colaboracion con equipos multidisciplinarios.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Proyectos Destacados</h2>
+        <div class="two-col">
+          <article class="card">
+            <p class="meta">SaaS de turnos online</p>
+            <h3>Zafiro Turnos</h3>
+            <p>
+              Plataforma para reservas online, agenda y gestion diaria de
+              barberias y peluquerias.
+            </p>
+            <ul>
+              <li>Desarrollo de experiencia mobile-first para reservas y administracion.</li>
+              <li>Panel interno y flujos de negocio del servicio.</li>
+              <li>Uso de Supabase para datos en tiempo real.</li>
+            </ul>
+            <p><a href="https://www.zafiroturnos.com.ar/">www.zafiroturnos.com.ar</a></p>
+          </article>
+
+          <article class="card">
+            <p class="meta">Sistema de logistica y transporte</p>
+            <h3>Gestion Camioneras</h3>
+            <p>
+              Sistema operativo para administrar flota, viajes, choferes y
+              seguimiento general de operaciones.
+            </p>
+            <ul>
+              <li>Panel de gestion para viajes, camiones y usuarios.</li>
+              <li>Visualizacion en mapa para lectura operativa.</li>
+              <li>Control de acceso por roles.</li>
+            </ul>
+            <p><a href="https://camioneras-gestion.vercel.app/">camioneras-gestion.vercel.app</a></p>
+          </article>
+
+          <article class="card">
+            <p class="meta">Web institucional + sistema interno</p>
+            <h3>Instituto Investigacion Richardi</h3>
+            <p>
+              Sitio institucional y solucion de gestion de muestras, clientes y
+              resultados.
+            </p>
+            <ul>
+              <li>Flujo de trabajo para muestras y seguimiento operativo.</li>
+              <li>Automatizacion de resultados por email.</li>
+              <li>Acceso por roles y orden administrativo interno.</li>
+            </ul>
+            <p><a href="https://institutoinvestigacionrichardi.com/">institutoinvestigacionrichardi.com</a></p>
+          </article>
+
+          <article class="card">
+            <p class="meta">Valor Profesional</p>
+            <h3>Lo que puedo aportar</h3>
+            <ul>
+              <li>Capacidad para moverme entre frontend, backend y datos.</li>
+              <li>Transformo necesidades de negocio en funcionalidades concretas.</li>
+              <li>Trabajo con foco en claridad, utilidad real y mejora continua.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
