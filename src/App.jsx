@@ -33,6 +33,24 @@ function App() {
     return () => observer.disconnect()
   }, [])
 
+  useEffect(() => {
+    const root = document.documentElement
+    const onPointerMove = ({ clientX, clientY }) => {
+      root.style.setProperty('--mouse-x', `${clientX}px`)
+      root.style.setProperty('--mouse-y', `${clientY}px`)
+      root.style.setProperty('--shift-x', `${(clientX / innerWidth - .5) * 18}px`)
+      root.style.setProperty('--shift-y', `${(clientY / innerHeight - .5) * 18}px`)
+    }
+    window.addEventListener('pointermove', onPointerMove, { passive: true })
+    return () => window.removeEventListener('pointermove', onPointerMove)
+  }, [])
+
+  const tiltProject = (event) => {
+    const rect = event.currentTarget.getBoundingClientRect()
+    event.currentTarget.style.setProperty('--px', `${((event.clientX - rect.left) / rect.width - .5) * 12}px`)
+    event.currentTarget.style.setProperty('--py', `${((event.clientY - rect.top) / rect.height - .5) * 12}px`)
+  }
+
   const closeMenu = () => setMenuOpen(false)
 
   return (
@@ -53,6 +71,8 @@ function App() {
       <main>
         <section className="hero" id="inicio">
           <div className="hero-grid" aria-hidden="true" />
+          <div className="hero-glow" aria-hidden="true" />
+          <div className="hero-orbit" aria-hidden="true"><span /></div>
           <div className="status"><i /> Disponible para nuevos proyectos</div>
           <div className="hero-title">
             <p className="kicker">Full Stack · Web, Android & Desktop · Argentina</p>
@@ -64,15 +84,28 @@ function App() {
           </div>
         </section>
 
+        <div className="motion-strip" aria-hidden="true">
+          <div className="motion-track">
+            <div className="motion-group">
+              <span>Desarrollo web</span><i /> <span>Apps Android</span><i /> <span>Experiencias desktop</span><i /> <span>Productos que crecen</span><i />
+              <span>Desarrollo web</span><i /> <span>Apps Android</span><i /> <span>Experiencias desktop</span><i /> <span>Productos que crecen</span><i />
+            </div>
+            <div className="motion-group">
+              <span>Desarrollo web</span><i /> <span>Apps Android</span><i /> <span>Experiencias desktop</span><i /> <span>Productos que crecen</span><i />
+              <span>Desarrollo web</span><i /> <span>Apps Android</span><i /> <span>Experiencias desktop</span><i /> <span>Productos que crecen</span><i />
+            </div>
+          </div>
+        </div>
+
         <section className="projects section-pad" id="proyectos">
           <header className="section-head" data-reveal>
             <div><span className="section-no">01</span><p>Trabajo seleccionado</p></div>
             <h2>Proyectos que resuelven<br/><em>problemas.</em></h2>
           </header>
           <div className="project-list">
-            {projects.map((project) => (
-              <article className="project" key={project.title} data-reveal>
-                <a className="project-visual" href={project.url} target="_blank" rel="noreferrer" aria-label={`Ver ${project.title}`}>
+            {projects.map((project, index) => (
+              <article className="project" key={project.title} data-reveal style={{ '--delay': `${index * 90}ms` }}>
+                <a className="project-visual" href={project.url} target="_blank" rel="noreferrer" aria-label={`Ver ${project.title}`} onPointerMove={tiltProject} onPointerLeave={event => { event.currentTarget.style.removeProperty('--px'); event.currentTarget.style.removeProperty('--py') }}>
                   <img src={project.image} alt={`Captura del proyecto ${project.title}`} />
                   <span className="visit"><ArrowUpRight /></span>
                 </a>
