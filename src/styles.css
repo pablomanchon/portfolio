@@ -28,8 +28,9 @@
 :root{--mouse-x:50vw;--mouse-y:50vh;--shift-x:0px;--shift-y:0px}
 .hero-grid{inset:-30px;transform:translate(calc(var(--shift-x) * -.35),calc(var(--shift-y) * -.35));transition:transform .35s ease-out}
 .hero-glow{position:absolute;width:38vw;height:38vw;left:calc(var(--mouse-x) - 19vw);top:calc(var(--mouse-y) - 19vw);background:radial-gradient(circle,rgba(200,255,53,.09),transparent 64%);filter:blur(8px);pointer-events:none;transition:left .18s linear,top .18s linear}
-.hero-orbit{position:absolute;width:min(32vw,460px);aspect-ratio:1;border:1px dashed rgba(255,255,255,.12);border-radius:50%;right:7vw;top:18vh;animation:orbit-spin 26s linear infinite}
+.hero-orbit{position:absolute;z-index:1;width:min(32vw,460px);aspect-ratio:1;border:1px dashed rgba(255,255,255,.12);border-radius:50%;right:7vw;top:18vh;animation:orbit-spin 26s linear infinite}
 .hero-orbit span{position:absolute;width:9px;height:9px;background:var(--acid);border-radius:50%;left:50%;top:-5px;box-shadow:0 0 20px var(--acid)}
+.hero .status{z-index:4;background:#10100f;box-shadow:0 0 0 8px #10100f}
 .motion-strip{overflow:hidden;background:var(--acid);border-bottom:1px solid rgba(17,17,15,.25);padding:15px 0}
 .motion-track{width:max-content;display:flex;animation:strip-move 24s linear infinite;font:600 12px DM Mono;text-transform:uppercase;letter-spacing:.12em}
 .motion-group{min-width:100vw;display:flex;align-items:center;justify-content:flex-start;gap:24px;flex-shrink:0;padding-right:24px}
