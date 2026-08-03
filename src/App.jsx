@@ -100,7 +100,7 @@ function App() {
         <section className="projects section-pad" id="proyectos">
           <header className="section-head" data-reveal>
             <div><span className="section-no">01</span><p>Trabajo seleccionado</p></div>
-            <h2>Proyectos que resuelven<br/><em>problemas.</em></h2>
+            <h2>Proyectos que resuelven<br/> <em>problemas.</em></h2>
           </header>
           <div className="project-list">
             {projects.map((project, index) => (
@@ -126,7 +126,7 @@ function App() {
         <section className="about section-pad" id="perfil">
           <header className="section-head light" data-reveal>
             <div><span className="section-no">02</span><p>Sobre mí</p></div>
-            <h2>Del concepto a<br/><em>producción.</em></h2>
+            <h2>Del concepto a<br/> <em>producción.</em></h2>
           </header>
           <div className="about-grid">
             <div className="about-copy" data-reveal>
