@@ -16,6 +16,11 @@ const projects = [
     number: '03', title: 'Gestión Camioneras', type: 'Logística · Operaciones',
     description: 'Sistema operativo para administrar flota, viajes y choferes. Incluye visualización geográfica y control de acceso por roles.',
     tags: ['Logística', 'Mapa operativo', 'Gestión de flota'], image: '/projects/gestion-camioneras.jpg', url: 'https://camioneras-gestion.vercel.app/'
+  },
+  {
+    number: '04', title: 'Zafrix', type: 'SaaS · Stock y ventas',
+    description: 'Aplicación multiusuario para gestionar stock, ventas, caja y facturación. Organiza cada negocio con accesos específicos para dueños, administradores y vendedores.',
+    tags: ['Control de stock', 'Ventas y facturación', 'Roles de usuario'], image: '/projects/zafrix-stock-ventas.png', url: 'https://www.zafrixsoftware.com/', containImage: true
   }
 ]
 
@@ -105,7 +110,7 @@ function App() {
           <div className="project-list">
             {projects.map((project, index) => (
               <article className="project" key={project.title} data-reveal style={{ '--delay': `${index * 90}ms` }}>
-                <a className="project-visual" href={project.url} target="_blank" rel="noreferrer" aria-label={`Ver ${project.title}`} onPointerMove={tiltProject} onPointerLeave={event => { event.currentTarget.style.removeProperty('--px'); event.currentTarget.style.removeProperty('--py') }}>
+                <a className={`project-visual${project.containImage ? ' project-visual--contain' : ''}`} href={project.url} target="_blank" rel="noreferrer" aria-label={`Ver ${project.title}`} onPointerMove={tiltProject} onPointerLeave={event => { event.currentTarget.style.removeProperty('--px'); event.currentTarget.style.removeProperty('--py') }}>
                   <img src={project.image} alt={`Captura del proyecto ${project.title}`} />
                   <span className="visit"><ArrowUpRight /></span>
                 </a>
