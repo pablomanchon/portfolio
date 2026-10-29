@@ -9,18 +9,23 @@ const projects = [
   },
   {
     number: '02', title: 'Instituto Richardi', type: 'Web institucional · Sistema interno',
-    description: 'Sitio institucional y solución integral para gestionar muestras, clientes y resultados, con automatizaciones de envío por email.',
-    tags: ['Gestión de muestras', 'Automatización email', 'Resultados digitales'], image: '/projects/instituto-richardi.jpg', url: 'https://institutoinvestigacionrichardi.com/'
+    description: 'Sitio institucional y solución integral para gestionar muestras, clientes y resultados, con envío automático por email. Conectada a un equipo FOSS, suma una biblioteca digital y un complemento de IA personalizado vía MCP.',
+    tags: ['Integración FOSS', 'Biblioteca digital', 'IA con MCP'], image: '/projects/instituto-richardi.jpg', url: 'https://institutoinvestigacionrichardi.com/'
   },
   {
-    number: '03', title: 'Gestión Camioneras', type: 'Logística · Operaciones',
-    description: 'Sistema operativo para administrar flota, viajes y choferes. Incluye visualización geográfica y control de acceso por roles.',
-    tags: ['Logística', 'Mapa operativo', 'Gestión de flota'], image: '/projects/gestion-camioneras.jpg', url: 'https://camioneras-gestion.vercel.app/'
+    number: '03', title: 'Zafrix', type: 'SaaS · Stock y ventas',
+    description: 'Aplicación multiusuario para gestionar stock, ventas, caja y facturación. Organiza cada negocio con accesos específicos para dueños, administradores y vendedores, e incluye un complemento de IA personalizado vía MCP.',
+    tags: ['Control de stock', 'Ventas y facturación', 'IA con MCP'], image: '/projects/zafrix-stock-ventas.png', url: 'https://www.zafrixsoftware.com/', containImage: true
   },
   {
-    number: '04', title: 'Zafrix', type: 'SaaS · Stock y ventas',
-    description: 'Aplicación multiusuario para gestionar stock, ventas, caja y facturación. Organiza cada negocio con accesos específicos para dueños, administradores y vendedores.',
-    tags: ['Control de stock', 'Ventas y facturación', 'Roles de usuario'], image: '/projects/zafrix-stock-ventas.png', url: 'https://www.zafrixsoftware.com/', containImage: true
+    number: '04', title: 'Casa Tano', type: 'SaaS · Gestión de bodega',
+    description: 'Sistema para controlar barricas, barriles, tanques y ánforas de una bodega. Escaneo de QR, seguimiento de litros y rellenos, y gestión de ventas, caja y vinos desde PC o celular, con un complemento de IA personalizado vía MCP.',
+    tags: ['Control de bodega', 'Códigos QR', 'IA con MCP'], image: '/projects/casatano.jpg', url: 'https://casatano-gestion.vercel.app'
+  },
+  {
+    number: '05', title: 'Rodar', type: 'SaaS · Gestión para bicicleterías',
+    description: 'Plataforma para organizar el taller de una bicicletería: services, clientes, bicicletas, productos con alerta de stock y ventas, con una vista pensada para usar desde el celular.',
+    tags: ['Gestión de services', 'Control de stock', 'Ventas'], image: '/projects/rodarmz.jpg', url: 'https://www.rodarmz.com'
   }
 ]
 
