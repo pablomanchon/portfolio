@@ -71,7 +71,7 @@ function App() {
           <a href="#proyectos" onClick={closeMenu}>Proyectos</a>
           <a href="#perfil" onClick={closeMenu}>Perfil</a>
           <a href="#contacto" onClick={closeMenu}>Contacto</a>
-          <a className="nav-cv" href="/Pablo_Manchon_Richardi_CV.pdf" download onClick={closeMenu}>Descargar CV <Download size={15}/></a>
+          <a className="nav-cv" href="/Pablo_Manchon_Richardi_CV_Full_Stack.pdf" download onClick={closeMenu}>Descargar CV <Download size={15}/></a>
         </nav>
         <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}>
           {menuOpen ? <X /> : <Menu />}
@@ -143,7 +143,7 @@ function App() {
               <p className="lead">Soy Pablo, desarrollador Full Stack con foco en crear herramientas útiles para web, Android y desktop.</p>
               <p>Me muevo entre frontend, backend y datos para construir soluciones completas: interfaces responsivas, lógica de negocio, paneles administrativos, roles y automatizaciones.</p>
               <p>Disfruto entender el problema antes de escribir código y acompañar cada producto desde la idea hasta su publicación.</p>
-              <a href="/Pablo_Manchon_Richardi_CV.pdf" className="text-link" download>Descargar CV <Download size={18}/></a>
+              <a href="/Pablo_Manchon_Richardi_CV_Full_Stack.pdf" className="text-link" download>Descargar CV <Download size={18}/></a>
             </div>
             <div className="skill-block" data-reveal>
               <p className="mini-label">Herramientas & tecnologías</p>
