@@ -4,17 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pablo Manchon Richardi | CV Full Stack</title>
-    <meta name="theme-color" content="#c84b31" />
-    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+    <meta name="theme-color" content="#0f766e" />
     <style>
       :root {
-        --bg: #f4efe7;
         --paper: #fffdf9;
         --ink: #1d2433;
         --muted: #5f6b7b;
-        --line: #d8d0c4;
+        --line: #e2dbd0;
         --accent: #0f766e;
-        --accent-soft: #dff3ef;
+        --accent-soft: #e3f4f0;
         --chip: #eef3f8;
       }
 
@@ -25,41 +23,41 @@
       body {
         margin: 0;
         font-family: "Segoe UI", Arial, sans-serif;
-        background: linear-gradient(135deg, #efe7db 0%, #f7f3ec 52%, #e8f4f1 100%);
+        background: #ece6dc;
         color: var(--ink);
       }
 
       a {
         color: inherit;
+        text-decoration: none;
       }
 
       .page {
         width: 210mm;
-        min-height: 297mm;
         margin: 0 auto;
-        padding: 14mm 14mm 12mm;
+        padding: 11mm 13mm;
         background: var(--paper);
       }
 
       .top {
         display: grid;
-        grid-template-columns: 1.8fr 1fr;
-        gap: 16px;
-        padding-bottom: 14px;
+        grid-template-columns: 1.75fr 1fr;
+        gap: 18px;
+        padding-bottom: 12px;
         border-bottom: 1px solid var(--line);
       }
 
       .name {
-        margin: 0 0 6px;
+        margin: 0 0 4px;
         font-size: 28px;
         line-height: 1.05;
-        letter-spacing: -0.04em;
+        letter-spacing: -0.03em;
       }
 
       .role {
-        margin: 0 0 12px;
+        margin: 0 0 10px;
         color: var(--accent);
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.12em;
@@ -68,41 +66,47 @@
       .summary {
         margin: 0;
         color: var(--muted);
-        font-size: 13px;
+        font-size: 12.5px;
         line-height: 1.5;
+      }
+
+      .summary strong {
+        color: var(--ink);
+        font-weight: 600;
       }
 
       .contact {
         display: grid;
-        gap: 6px;
+        gap: 5px;
         align-content: start;
-        padding: 12px;
+        padding: 11px 12px;
         border: 1px solid var(--line);
-        border-radius: 16px;
-        background: linear-gradient(180deg, #fff 0%, #f7faf8 100%);
+        border-radius: 14px;
+        background: #fff;
       }
 
       .contact strong {
-        font-size: 12px;
+        margin-bottom: 2px;
+        font-size: 10.5px;
         text-transform: uppercase;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.14em;
         color: var(--muted);
       }
 
       .contact a,
       .contact span {
-        font-size: 13px;
-        line-height: 1.4;
+        font-size: 12px;
+        line-height: 1.35;
         word-break: break-word;
       }
 
       .section {
-        margin-top: 14px;
+        margin-top: 13px;
       }
 
       .section-title {
         margin: 0 0 8px;
-        font-size: 12px;
+        font-size: 11px;
         text-transform: uppercase;
         letter-spacing: 0.14em;
         color: var(--muted);
@@ -111,63 +115,108 @@
       .chips {
         display: flex;
         flex-wrap: wrap;
-        gap: 6px;
+        gap: 5px;
       }
 
       .chip {
-        padding: 6px 9px;
+        padding: 4px 9px;
         border-radius: 999px;
         background: var(--chip);
-        font-size: 11px;
+        font-size: 10.5px;
         font-weight: 600;
       }
 
-      .two-col {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
+      .chip.accent {
+        background: var(--accent-soft);
+        color: var(--accent);
       }
 
-      .card {
-        padding: 12px;
+      .projects {
+        display: grid;
+        gap: 8px;
+      }
+
+      .project {
+        padding: 10px 13px 11px;
         border: 1px solid var(--line);
-        border-radius: 16px;
+        border-left: 3px solid var(--accent);
+        border-radius: 12px;
         background: #fff;
         break-inside: avoid;
         page-break-inside: avoid;
       }
 
-      .card h3 {
-        margin: 0 0 5px;
-        font-size: 15px;
+      .project-head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
       }
 
-      .meta {
-        margin: 0 0 6px;
+      .project h3 {
+        margin: 0;
+        font-size: 14.5px;
+      }
+
+      .project h3 span {
+        margin-left: 6px;
         color: var(--accent);
-        font-size: 11px;
+        font-size: 10px;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.08em;
       }
 
-      .card p {
-        margin: 0 0 6px;
+      .project-link {
+        flex-shrink: 0;
         color: var(--muted);
-        font-size: 12px;
+        font-size: 11px;
+      }
+
+      .project-desc {
+        margin: 3px 0 5px;
+        color: var(--muted);
+        font-size: 11.5px;
         line-height: 1.45;
+      }
+
+      .project ul {
+        columns: 2;
+        column-gap: 20px;
+      }
+
+      .project li {
+        break-inside: avoid;
+      }
+
+      .project .chips {
+        margin-top: 6px;
       }
 
       ul {
         margin: 0;
-        padding-left: 18px;
+        padding-left: 16px;
       }
 
       li {
-        margin-bottom: 5px;
-        color: var(--ink);
-        font-size: 12px;
-        line-height: 1.35;
+        margin-bottom: 3px;
+        font-size: 11.5px;
+        line-height: 1.38;
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .card {
+        padding: 10px 12px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #fff;
+        break-inside: avoid;
+        page-break-inside: avoid;
       }
 
       @page {
@@ -177,20 +226,11 @@
 
       @media print {
         body {
-          background: #fff;
+          background: var(--paper);
         }
 
         .page {
           margin: 0;
-          box-shadow: none;
-        }
-
-        .section,
-        .two-col,
-        .card,
-        .footer-note {
-          break-inside: avoid;
-          page-break-inside: avoid;
         }
       }
     </style>
@@ -202,40 +242,131 @@
           <h1 class="name">Pablo Manchon Richardi</h1>
           <p class="role">Desarrollador Full Stack</p>
           <p class="summary">
-            Desarrollador Full Stack con experiencia creando productos y sistemas para
-            necesidades de negocio. Construyo interfaces, logica de
-            administracion, flujos con datos y soluciones publicadas en
-            produccion. Busco una oportunidad para aportar en un equipo como
-            desarrollador Full Stack para web, Android o desktop.
+            Desarrollo productos de software completos para negocios reales, desde
+            la idea hasta producción: interfaces, lógica de negocio, bases de datos
+            y automatizaciones. Tengo cinco sistemas publicados, con
+            <strong>integraciones de IA vía MCP</strong> y
+            <strong>conexión con equipos de laboratorio</strong>. Busco sumarme a un
+            equipo como desarrollador Full Stack para web, Android o desktop.
           </p>
         </section>
 
         <aside class="contact">
           <strong>Contacto</strong>
-          <span>Argentina</span>
+          <span>Argentina · Remoto</span>
           <a href="mailto:pablomanchon97@gmail.com">pablomanchon97@gmail.com</a>
+          <a href="https://wa.me/5492616416111">+54 9 261 641 6111</a>
           <a href="https://github.com/pablomanchon">github.com/pablomanchon</a>
-          <a href="https://www.linkedin.com/in/pablo-manchon-richardi-471346252/">
-            linkedin.com/in/pablo-manchon-richardi-471346252
-          </a>
-          <a href="https://wa.me/5492616416111">WhatsApp: +54 9 261 641 6111</a>
+          <a href="https://www.linkedin.com/in/pablo-manchon-richardi-471346252/">linkedin.com/in/pablo-manchon-richardi</a>
+          <a href="https://pablomanchon-portfolio.vercel.app">pablomanchon-portfolio.vercel.app</a>
         </aside>
       </header>
 
       <section class="section">
-        <h2 class="section-title">Stack Tecnico</h2>
+        <h2 class="section-title">Stack técnico</h2>
         <div class="chips">
-          <span class="chip">HTML</span>
-          <span class="chip">CSS</span>
-          <span class="chip">JavaScript</span>
           <span class="chip">React</span>
+          <span class="chip">JavaScript</span>
           <span class="chip">Node.js</span>
           <span class="chip">Supabase</span>
           <span class="chip">SQL</span>
-          <span class="chip">Git</span>
-          <span class="chip">GitHub</span>
-          <span class="chip">SEO tecnico</span>
-          <span class="chip">Google Search</span>
+          <span class="chip">HTML &amp; CSS</span>
+          <span class="chip">Android &amp; Desktop</span>
+          <span class="chip">Git &amp; GitHub</span>
+          <span class="chip">SEO técnico</span>
+          <span class="chip accent">MCP · Integraciones de IA</span>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Proyectos en producción</h2>
+        <div class="projects">
+          <article class="project">
+            <div class="project-head">
+              <h3>Instituto Investigación Richardi <span>Laboratorio · Sistema interno</span></h3>
+              <a class="project-link" href="https://institutoinvestigacionrichardi.com/">institutoinvestigacionrichardi.com</a>
+            </div>
+            <p class="project-desc">
+              Sitio institucional y sistema interno para gestionar muestras, clientes
+              y resultados de análisis de un laboratorio enológico.
+            </p>
+            <ul>
+              <li>Conexión de la app con un equipo de análisis FOSS.</li>
+              <li>Biblioteca digital integrada al sistema.</li>
+              <li>App completa conectada vía MCP a un complemento de IA.</li>
+              <li>Envío automático de resultados por email.</li>
+              <li>Informes en PDF y Excel, remitos y comprobantes internos.</li>
+              <li>Acceso por roles para el equipo del laboratorio.</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div class="project-head">
+              <h3>Zafrix <span>SaaS · Stock y ventas</span></h3>
+              <a class="project-link" href="https://www.zafrixsoftware.com/">zafrixsoftware.com</a>
+            </div>
+            <p class="project-desc">
+              Aplicación multiusuario para gestionar stock, ventas, caja y facturación
+              de distintos negocios desde un mismo lugar.
+            </p>
+            <ul>
+              <li>Roles para dueños, administradores y vendedores.</li>
+              <li>Control de stock, caja y facturación por negocio.</li>
+              <li>Complemento de IA propio conectado vía MCP.</li>
+              <li>Experiencia adaptada a escritorio y celular.</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div class="project-head">
+              <h3>Casa Tano <span>SaaS · Gestión de bodega</span></h3>
+              <a class="project-link" href="https://casatano-gestion.vercel.app">casatano-gestion.vercel.app</a>
+            </div>
+            <p class="project-desc">
+              Sistema para controlar barricas, barriles, tanques y ánforas de una
+              bodega, junto con ventas, caja y vinos.
+            </p>
+            <ul>
+              <li>Escaneo QR para registrar cada recipiente.</li>
+              <li>Seguimiento de litros, rellenos y estado de la bodega.</li>
+              <li>Complemento de IA propio conectado vía MCP.</li>
+              <li>Versión para PC y celular con acceso por roles.</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div class="project-head">
+              <h3>Zafiro Turnos <span>SaaS · Turnos online</span></h3>
+              <a class="project-link" href="https://www.zafiroturnos.com.ar/">zafiroturnos.com.ar</a>
+            </div>
+            <p class="project-desc">
+              Plataforma de reservas online, agenda y gestión diaria para barberías y
+              peluquerías.
+            </p>
+            <ul>
+              <li>Experiencia mobile-first para reservas y administración.</li>
+              <li>Panel interno con los flujos de negocio del servicio.</li>
+              <li>Datos en tiempo real con Supabase.</li>
+              <li>Link de reserva propio para cada negocio.</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div class="project-head">
+              <h3>Rodar <span>SaaS · Gestión para bicicleterías</span></h3>
+              <a class="project-link" href="https://www.rodarmz.com">rodarmz.com</a>
+            </div>
+            <p class="project-desc">
+              Plataforma para organizar el taller de una bicicletería: services,
+              clientes, bicicletas, productos y ventas.
+            </p>
+            <ul>
+              <li>Seguimiento de services desde el ingreso hasta la entrega.</li>
+              <li>Control de productos con alertas de stock bajo.</li>
+              <li>Registro de clientes y sus bicicletas.</li>
+              <li>Interfaz responsive pensada para usar desde el celular.</li>
+            </ul>
+          </article>
         </div>
       </section>
 
@@ -243,115 +374,20 @@
         <article class="card">
           <h2 class="section-title">Fortalezas</h2>
           <ul>
-            <li>Desarrollo de interfaces claras y responsivas para web, Android y desktop.</li>
-            <li>Implementacion de logica de negocio, paneles administrativos y roles.</li>
-            <li>Trabajo con bases de datos, flujos operativos y automatizaciones.</li>
-            <li>Capacidad para llevar proyectos desde idea hasta publicacion.</li>
+            <li>Frontend, backend y datos en un mismo producto.</li>
+            <li>Transformo necesidades de negocio en funcionalidades concretas.</li>
+            <li>Paneles, roles, automatizaciones e integraciones.</li>
           </ul>
         </article>
 
         <article class="card">
-          <h2 class="section-title">Perfil Laboral</h2>
+          <h2 class="section-title">Busco</h2>
           <ul>
-            <li>Perfil orientado a posiciones Full Stack, Frontend o Backend.</li>
-            <li>Interes en sumarme a equipos de producto, software factory o desarrollo web.</li>
-            <li>Experiencia construyendo soluciones para turnos, stock, ventas y gestion interna.</li>
-            <li>Disponible para trabajo remoto y colaboracion con equipos multidisciplinarios.</li>
+            <li>Posiciones Full Stack, Frontend o Backend.</li>
+            <li>Equipos de producto, software factory o desarrollo web.</li>
+            <li>Trabajo remoto en equipos multidisciplinarios.</li>
           </ul>
         </article>
-      </section>
-
-      <section class="section">
-        <h2 class="section-title">Proyectos Destacados</h2>
-        <div class="two-col">
-          <article class="card">
-            <p class="meta">SaaS de turnos online</p>
-            <h3>Zafiro Turnos</h3>
-            <p>
-              Plataforma para reservas online, agenda y gestion diaria de
-              barberias y peluquerias.
-            </p>
-            <ul>
-              <li>Desarrollo de experiencia mobile-first para reservas y administracion.</li>
-              <li>Panel interno y flujos de negocio del servicio.</li>
-              <li>Uso de Supabase para datos en tiempo real.</li>
-            </ul>
-            <p><a href="https://www.zafiroturnos.com.ar/">www.zafiroturnos.com.ar</a></p>
-          </article>
-
-          <article class="card">
-            <p class="meta">Web institucional + sistema interno</p>
-            <h3>Instituto Investigacion Richardi</h3>
-            <p>
-              Sitio institucional y solucion de gestion de muestras, clientes y
-              resultados.
-            </p>
-            <ul>
-              <li>Flujo de trabajo para muestras y seguimiento operativo.</li>
-              <li>Automatizacion de resultados por email.</li>
-              <li>Acceso por roles y orden administrativo interno.</li>
-              <li>Conexion de la app con un equipo FOSS y creacion de una biblioteca digital.</li>
-              <li>Integracion de toda la app via MCP para un complemento de IA personalizado.</li>
-            </ul>
-            <p><a href="https://institutoinvestigacionrichardi.com/">institutoinvestigacionrichardi.com</a></p>
-          </article>
-
-          <article class="card">
-            <p class="meta">SaaS de stock y ventas</p>
-            <h3>Zafrix</h3>
-            <p>
-              Aplicacion multiusuario para gestionar stock, ventas, caja y
-              facturacion de distintos negocios.
-            </p>
-            <ul>
-              <li>Accesos diferenciados para duenos, administradores y vendedores.</li>
-              <li>Control de stock, caja y facturacion en un mismo lugar.</li>
-              <li>Complemento de IA personalizado conectado a la app via MCP.</li>
-            </ul>
-            <p><a href="https://www.zafrixsoftware.com/">www.zafrixsoftware.com</a></p>
-          </article>
-
-          <article class="card">
-            <p class="meta">SaaS de gestion de bodega</p>
-            <h3>Casa Tano</h3>
-            <p>
-              Sistema para controlar barricas, barriles, tanques y anforas de
-              una bodega, con ventas, caja y vinos.
-            </p>
-            <ul>
-              <li>Escaneo de codigos QR para registrar movimientos de cada recipiente.</li>
-              <li>Seguimiento de litros, rellenos y estado de la bodega.</li>
-              <li>Version para PC y celular con acceso por roles.</li>
-              <li>Complemento de IA personalizado conectado a la app via MCP.</li>
-            </ul>
-            <p><a href="https://casatano-gestion.vercel.app">casatano-gestion.vercel.app</a></p>
-          </article>
-
-          <article class="card">
-            <p class="meta">SaaS para bicicleterias</p>
-            <h3>Rodar</h3>
-            <p>
-              Plataforma para organizar el taller de una bicicleteria: services,
-              clientes, bicicletas, productos y ventas.
-            </p>
-            <ul>
-              <li>Seguimiento de services desde el ingreso hasta la entrega.</li>
-              <li>Control de productos con alertas de stock bajo.</li>
-              <li>Interfaz responsive pensada para usar desde el celular.</li>
-            </ul>
-            <p><a href="https://www.rodarmz.com">www.rodarmz.com</a></p>
-          </article>
-
-          <article class="card">
-            <p class="meta">Valor Profesional</p>
-            <h3>Lo que puedo aportar</h3>
-            <ul>
-              <li>Capacidad para moverme entre frontend, backend y datos.</li>
-              <li>Transformo necesidades de negocio en funcionalidades concretas.</li>
-              <li>Trabajo con foco en claridad, utilidad real y mejora continua.</li>
-            </ul>
-          </article>
-        </div>
       </section>
     </main>
   </body>
